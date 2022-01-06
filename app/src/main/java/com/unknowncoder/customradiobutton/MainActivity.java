@@ -21,14 +21,17 @@ public class MainActivity extends AppCompatActivity {
         arrayList=new ArrayList<>();
         recyclerView=findViewById(R.id.recyclerview);
 
-        arrayList.add(new RadioModel("UI"));
-        arrayList.add(new RadioModel("Data Structures"));
-        arrayList.add(new RadioModel("Css"));
-        arrayList.add(new RadioModel("Java"));
-        arrayList.add(new RadioModel("C++"));
+        arrayList.add(new RadioModel("#UI"));
+        arrayList.add(new RadioModel("#Data Structures"));
+        arrayList.add(new RadioModel("#Css"));
+        arrayList.add(new RadioModel("#Java"));
+        arrayList.add(new RadioModel("#C++"));
+        arrayList.add(new RadioModel("#C"));
+        arrayList.add(new RadioModel("#Swift"));
+
 
         CustomRadioAdapter adapter=new CustomRadioAdapter(arrayList,getApplicationContext());
-        recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+        recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.HORIZONTAL,false));
         recyclerView.setAdapter(adapter);
     }
 }
